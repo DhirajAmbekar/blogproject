@@ -1,0 +1,23 @@
+{% extends './navbar/navbar.html' %}
+
+{% block content %}
+
+{{name}}
+
+{% for i in data %}
+ssssss
+    <div class="card col-4 m-3 " style="width: 18rem;">
+        <div>{{i.id}}</div>
+        <img src="media/{{i.image}}" class="card-img-top" alt="..." style="height: 200px;">
+        
+        <div class="card-body">
+          <h5 class="card-title">{{i.title}}</h5>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          <a href="/update/{{ i.id }}" class="btn btn-warning">update</a>
+          
+          <a href="/delete/{{ i.id }}" class="btn btn-danger">delete</a>
+        </div>
+      </div>
+    {% endfor %}
+<a href='/logout_page'>logout</a>
+{% endblock content %}

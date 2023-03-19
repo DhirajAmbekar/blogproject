@@ -1,0 +1,10 @@
+{% extends './navbar/navbar.html' %}
+
+{% block content %}
+<form method="POST" class="m-5" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="submit" class="btn btn-success">
+    <a class="btn btn-danger" href="/">back</a>
+</form>
+{% endblock content %}
